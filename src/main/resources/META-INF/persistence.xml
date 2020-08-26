@@ -4,7 +4,7 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
 
-    <persistence-unit name="forum-database" transaction-type="JTA">
+    <persistence-unit name="forum-database" >
         <jta-data-source>java:/datasources/library</jta-data-source>
         <properties>
             <property name="javax.persistence.schema-generation.database.action"

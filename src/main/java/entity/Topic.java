@@ -1,7 +1,5 @@
 package entity;
 
-import javafx.geometry.Pos;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;

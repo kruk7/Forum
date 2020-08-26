@@ -18,6 +18,6 @@ public class Post implements Serializable
     @JoinColumn(name = "id_user")
     private User user;
     @ManyToOne
-    @JoinColumn(name = "id_user")
+    @JoinColumn(name = "id_topic")
     private Topic topic;
 }
