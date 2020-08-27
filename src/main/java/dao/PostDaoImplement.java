@@ -4,6 +4,7 @@ import entity.Post;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 public class PostDaoImplement implements PostDao
 {
@@ -11,6 +12,7 @@ public class PostDaoImplement implements PostDao
     EntityManager em;
 
     @Override
+    @Transactional
     public boolean addPost(Post post)
     {
         try

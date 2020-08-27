@@ -20,4 +20,34 @@ public class Post implements Serializable
     @ManyToOne
     @JoinColumn(name = "id_topic")
     private Topic topic;
+
+    public Long getId()
+    { return id; }
+
+    public void setId(Long id)
+    { this.id = id; }
+
+    public Timestamp getDate()
+    { return date; }
+
+    public void setDate(Timestamp date)
+    { this.date = date; }
+
+    public String getContent()
+    { return content; }
+
+    public void setContent(String content)
+    { this.content = content; }
+
+    public User getUser()
+    { return user; }
+
+    public void setUser(User user)
+    { this.user = user; }
+
+    public Topic getTopic()
+    { return topic; }
+
+    public void setTopic(Topic topic)
+    { this.topic = topic; }
 }

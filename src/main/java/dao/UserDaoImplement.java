@@ -6,6 +6,7 @@ import entity.User;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 
 public class UserDaoImplement implements UserDao
 {
@@ -17,11 +18,12 @@ public class UserDaoImplement implements UserDao
     {
         TypedQuery<User> query = em.createQuery("SELECT u FROM User u WHERE u.login = :login", User.class);
         query.setParameter("login", login);
-        User user = query.getSingleResult();
+        User user =  query.getSingleResult();
         return user;
     }
 
     @Override
+    @Transactional
     public boolean addUser(User user)
     {
         Role role = new Role();
